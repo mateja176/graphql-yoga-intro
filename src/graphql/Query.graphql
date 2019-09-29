@@ -1,3 +1,8 @@
 type Query {
   hello(name: String): String!
 }
+
+type User @entity {
+  id: String @id
+  email: String @column
+}

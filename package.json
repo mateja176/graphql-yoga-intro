@@ -12,17 +12,18 @@
   "author": "Mateja Petrovic <mateja176@gmail.com> (https://github.com/mateja176)",
   "license": "MIT",
   "dependencies": {
+    "@graphql-codegen/typescript-mongodb": "^1.7.0",
     "graphql": "^14.5.8",
     "graphql-tools": "^4.0.5",
     "graphql-yoga": "^1.18.3"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.7.0",
+    "@graphql-codegen/typescript": "1.6.1",
+    "@graphql-codegen/typescript-resolvers": "1.6.1",
     "merge-graphql-schemas": "^1.7.0",
     "nodemon": "^1.19.2",
     "ts-node": "^8.4.1",
-    "typescript": "^3.6.3",
-    "@graphql-codegen/typescript": "1.6.1",
-    "@graphql-codegen/typescript-resolvers": "1.6.1"
+    "typescript": "^3.6.3"
   }
 }

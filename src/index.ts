@@ -1,3 +1,4 @@
+import { DIRECTIVES } from '@graphql-codegen/typescript-mongodb';
 import { GraphQLServer } from 'graphql-yoga';
 import { fileLoader, mergeTypes } from 'merge-graphql-schemas';
 import { join } from 'path';
@@ -11,5 +12,8 @@ const resolvers: IResolvers = {
 
 const types = fileLoader(join(__dirname, 'graphql'));
 
-const server = new GraphQLServer({ typeDefs: mergeTypes(types), resolvers });
+const server = new GraphQLServer({
+  typeDefs: [DIRECTIVES, mergeTypes(types)],
+  resolvers,
+});
 server.start(() => console.log('Server is running on http://localhost:4000'));
